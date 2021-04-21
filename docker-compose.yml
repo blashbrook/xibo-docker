@@ -3,7 +3,7 @@ version: "2.1"
 services:
     cms-db:
         container_name: xibo-db
-        image: mysql:5.6
+        image: mysql:5.7
         volumes:
             - "./shared/db:/var/lib/mysql:Z"
         environment:
@@ -28,7 +28,7 @@ services:
             - xibo-net
     cms-web:
         container_name: xibo-cms
-        image: xibosignage/xibo-cms:release-2.3.9
+        image: xibosignage/xibo-cms:release-2.3.10
         volumes:
             - "./shared/cms/custom:/var/www/cms/custom:Z"
             - "./shared/backup:/var/www/backup:Z"
